@@ -2,25 +2,6 @@ import mongoose from "mongoose";
 
 import autoIncrement from 'mongoose-auto-increment';
 
-// const userSchema = mongoose.Schema({
-//     name: String,
-//     username: String,
-//     email: String,
-//     phone: String
-// })
-
-// autoIncrement.initialize(mongoose.connection);
-// userSchema.plugin(autoIncrement.plugin, 'user');
-
-// const user = mongoose.model('user', userSchema);
-
-// export default user;
-
-
-
-
-
-// ----------------- new code -------------------
 const counterSchema = mongoose.Schema({
     _id: { type: String, required: true },
     seq: { type: Number, default: 0 },
@@ -55,3 +36,24 @@ const counterSchema = mongoose.Schema({
 const user = mongoose.model("user", userSchema);
 
 export default user;
+
+
+// ----------------- old code ---------------------
+
+// const userSchema = mongoose.Schema({
+//     name: String,
+//     username: String,
+//     email: String,
+//     phone: String
+// })
+
+// autoIncrement.initialize(mongoose.connection);
+// userSchema.plugin(autoIncrement.plugin, 'user');
+
+// const user = mongoose.model('user', userSchema);
+
+// export default user;
+
+
+
+
